@@ -18,3 +18,10 @@ def test_init():
     filename = 'somefile.ext'
     fi = FileInfo(filename)
     assert fi.filename == filename
+
+
+def test_init_relative():
+    filename = "somefile.ext"
+    relative_path = f"../{filename}"
+    fi = FileInfo(relative_path)
+    assert fi.filename == filename

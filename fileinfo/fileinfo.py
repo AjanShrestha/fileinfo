@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
+import os
 
 
 class FileInfo:
-    def __init__(self, filename):
-        self.filename = filename
+    def __init__(self, path):
+        self.original_path = path
+        self.filename = os.path.basename(path)
